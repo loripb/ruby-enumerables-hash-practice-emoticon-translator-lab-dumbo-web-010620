@@ -3,16 +3,16 @@ require 'yaml'
 def load_library(file)
   data = YAML.load_file(file)
 
-  meaning = {}
+  meaning  = {}
   emoticon = {}
 
   data.each do |k, v|
-    meaning[v[1]] = k
+    meaning[v[1]]  = k
     emoticon[v[0]] = v[1]
   end
 
   new_data = {
-    get_meaning: meaning,
+    get_meaning:  meaning,
     get_emoticon: emoticon
   }
   new_data
